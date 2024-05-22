@@ -5,6 +5,7 @@ import { playground } from "@colyseus/playground";
 
 // Express
 import basicAuth from "express-basic-auth";
+import api from "./api";
 
 // Room handlers
 import { TownRoom } from "./rooms/TownRoom";
@@ -38,6 +39,7 @@ export default config({
     }
 
     app.use("/monitor", authMiddleware, monitor());
+    app.use("/api", api);
   },
 
   beforeListen: () => {},

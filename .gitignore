@@ -1,4 +1,3 @@
 node_modules
 *.lockb
-.env.development
-.env.production
+.env
